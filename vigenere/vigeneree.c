@@ -46,8 +46,10 @@ void encrypt(FILE *plainPtr, FILE *cyphPtr) {
         if (key[ik] == '\0')
             ik = 0;
 
+        // printf("%c corrimiento con:%c\n", plaintext[i], key[ik]);
+
         // revision para garantizar funcionamiento con letras.
-        char off = key[ik] >= off ? key[ik] - 'a' : key[ik];
+        char off = key[ik] >= 'a' ? key[ik] - 'a' : key[ik];
 
         // Tranformar caracter.
         plaintext[i] = plaintext[i] + off;

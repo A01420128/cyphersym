@@ -47,7 +47,7 @@ void dencrypt(FILE *cyphPtr, FILE *decryPtr) {
             ik = 0;
 
         // revision para garantizar funcionamiento con letras.
-        char off = key[ik] >= off ? key[ik] - 'a' : key[ik];
+        char off = key[ik] >= 'a' ? key[ik] - 'a' : key[ik];
 
         // Tranformar caracter.
         cyphertext[i] = cyphertext[i] - off;
